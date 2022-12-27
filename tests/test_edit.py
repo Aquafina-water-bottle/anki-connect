@@ -7,6 +7,8 @@ import pytest
 from conftest import get_dialog_instance, wait_until
 from plugin.edit import Edit, DecentPreviewer, history, DOMAIN_PREFIX
 
+# Edit.open_dialog_and_show_note_with_id
+
 
 NOTHING = object()
 
@@ -60,11 +62,11 @@ class JavascriptDialogButtonManipulator:
 ##############################################################################
 
 
-def test_edit_dialog_opens(setup):
+def test_edit_dialog_opens(setup): # aa
     Edit.open_dialog_and_show_note_with_id(setup.note1_id)
 
 
-def test_edit_dialog_opens_only_once(setup):
+def test_edit_dialog_opens_only_once(setup): # aa
     dialog1 = Edit.open_dialog_and_show_note_with_id(setup.note1_id)
     dialog2 = Edit.open_dialog_and_show_note_with_id(setup.note1_id)
     assert dialog1 is dialog2
@@ -154,7 +156,7 @@ class TestPreviewDialog:
         assert dialog._should_enable_next() is next_enabled
 
 
-class TestButtons:
+class TestButtons: # aa
     @pytest.fixture
     def manipulator(self, setup):
         dialog = Edit.open_dialog_and_show_note_with_id(setup.note1_id)
