@@ -68,6 +68,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run tests
-        run: |
-          export QTWEBENGINE_CHROMIUM_FLAGS="--no-sandbox"
-          tox -vvve ${{ matrix.environment }} -- -k "test_addon_buttons_get_disabled_enabled" --forked --verbose
+        run: tox -vvve ${{ matrix.environment }} -- -k "test_addon_buttons_get_disabled_enabled" --forked --verbose
