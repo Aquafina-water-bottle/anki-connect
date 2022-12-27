@@ -14,15 +14,10 @@ from plugin import AnkiConnect, anki_version
 from plugin.edit import Edit
 from plugin.util import DEFAULT_CONFIG
 
-#try:
-#    from PyQt6 import QtTest
-#except ImportError:
-#    from PyQt5 import QtTest
-
-#try:
-#    from PyQt6 import QtTest
-#except ImportError:
-from PyQt5 import QtTest
+try:
+    from PyQt6 import QtTest
+except ImportError:
+    from PyQt5 import QtTest
 
 
 ac = AnkiConnect()
